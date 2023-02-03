@@ -252,10 +252,10 @@ curl -iX POST \
     "address": {
         "type": "PostalAddress",
         "value": {
-            "streetAddress": "Bornholmer Straße 65",
-            "addressRegion": "Berlin",
-            "addressLocality": "Prenzlauer Berg",
-            "postalCode": "10439"
+            "streetAddress": "1 place Othmane Ibn Affane",
+            "addressRegion": "Rabat",
+            "addressLocality": "L'Agdal",
+            "postalCode": "10030"
         },
         "metadata": {
             "verified": {
@@ -268,12 +268,12 @@ curl -iX POST \
         "type": "geo:json",
         "value": {
              "type": "Point",
-             "coordinates": [13.3986, 52.5547]
+             "coordinates": [33.9921, -6.8488]
         }
     },
     "name": {
         "type": "Text",
-        "value": "Bösebrücke Einkauf"
+        "value": "Vente de matelats"
     }
 }'
 ```
@@ -293,10 +293,10 @@ curl -iX POST \
     "address": {
         "type": "PostalAddress",
         "value": {
-            "streetAddress": "Friedrichstraße 44",
-            "addressRegion": "Berlin",
-            "addressLocality": "Kreuzberg",
-            "postalCode": "10969"
+            "streetAddress": "5 Rue Karia",
+            "addressRegion": "Salé",
+            "addressLocality": "Medina",
+            "postalCode": "100012"
         },
         "metadata": {
             "verified": {
@@ -309,12 +309,12 @@ curl -iX POST \
         "type": "geo:json",
         "value": {
              "type": "Point",
-             "coordinates": [13.3903, 52.5075]
+             "coordinates": [34.0365, -6.8268]
         }
     },
     "name": {
         "type": "Text",
-        "value": "Checkpoint Markt"
+        "value": "Mall Médina Salé"
     }
 }'
 ```
