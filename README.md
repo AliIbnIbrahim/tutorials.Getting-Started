@@ -519,7 +519,7 @@ parameter - if a string has spaces in it, it can be URL encoded and held within 
 curl -G -X GET \
     'http://localhost:1026/v2/entities' \
     -d 'type=Store' \
-    -d 'q=name==%27Checkpoint%20Markt%27' \
+    -d 'q=name==MallMedinaSale' \
     -d 'options=keyValues'|jq
 ```
 
@@ -530,21 +530,42 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 
 ```json
 [
-    {
-        "id": "urn:ngsi-ld:Store:002",
-        "type": "Store",
-        "address": {
-            "streetAddress": "Friedrichstraße 44",
-            "addressRegion": "Berlin",
-            "addressLocality": "Kreuzberg",
-            "postalCode": "10969"
-        },
-        "location": {
-            "type": "Point",
-            "coordinates": [13.3903, 52.5075]
-        },
-        "name": "Checkpoint Markt"
-    }
+  {
+    "id": "urn:ngsi-ld:Store:001",
+    "type": "Store",
+    "address": {
+      "streetAddress": "1 place Othmane Ibn Affane",
+      "addressRegion": "Rabat",
+      "addressLocality": "Lagdal",
+      "postalCode": "10030"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        33.9921,
+        -6.8488
+      ]
+    },
+    "name": "Vente de matelats"
+  },
+  {
+    "id": "urn:ngsi-ld:Store:002",
+    "type": "Store",
+    "address": {
+      "streetAddress": "5 Rue Karia",
+      "addressRegion": "Sal_",
+      "addressLocality": "Medina",
+      "postalCode": "100012"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        34.0365,
+        -6.8268
+      ]
+    },
+    "name": "MallMedinaSale"
+  }
 ]
 ```
 
@@ -561,7 +582,7 @@ Filtering can be done using the `q` parameter - sub-attributes are annotated usi
 curl -G -X GET \
     'http://localhost:1026/v2/entities' \
     -d 'type=Store' \
-    -d 'q=address.addressLocality==Kreuzberg' \
+    -d 'q=address.addressLocality==Lagdal' \
     -d 'options=keyValues'
 ```
 
@@ -572,21 +593,24 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 
 ```json
 [
-    {
-        "id": "urn:ngsi-ld:Store:002",
-        "type": "Store",
-        "address": {
-            "streetAddress": "Friedrichstraße 44",
-            "addressRegion": "Berlin",
-            "addressLocality": "Kreuzberg",
-            "postalCode": "10969"
-        },
-        "location": {
-            "type": "Point",
-            "coordinates": [13.3903, 52.5075]
-        },
-        "name": "Checkpoint Markt"
-    }
+  {
+    "id": "urn:ngsi-ld:Store:001",
+    "type": "Store",
+    "address": {
+      "streetAddress": "1 place Othmane Ibn Affane",
+      "addressRegion": "Rabat",
+      "addressLocality": "Lagdal",
+      "postalCode": "10030"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        33.9921,
+        -6.8488
+      ]
+    },
+    "name": "Vente de matelats"
+  }
 ]
 ```
 
@@ -603,7 +627,7 @@ curl -G -X GET \
     'http://localhost:1026/v2/entities' \
     -d 'type=Store' \
     -d 'mq=address.verified==true' \
-    -d 'options=keyValues'
+    -d 'options=keyValues'|jq
 ```
 
 #### Response:
@@ -613,36 +637,42 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 
 ```json
 [
-    {
-        "id": "urn:ngsi-ld:Store:001",
-        "type": "Store",
-        "address": {
-            "streetAddress": "Bornholmer Straße 65",
-            "addressRegion": "Berlin",
-            "addressLocality": "Prenzlauer Berg",
-            "postalCode": "10439"
-        },
-        "location": {
-            "type": "Point",
-            "coordinates": [13.3986, 52.5547]
-        },
-        "name": "Bösebrücke Einkauf"
+  {
+    "id": "urn:ngsi-ld:Store:001",
+    "type": "Store",
+    "address": {
+      "streetAddress": "1 place Othmane Ibn Affane",
+      "addressRegion": "Rabat",
+      "addressLocality": "Lagdal",
+      "postalCode": "10030"
     },
-    {
-        "id": "urn:ngsi-ld:Store:002",
-        "type": "Store",
-        "address": {
-            "streetAddress": "Friedrichstraße 44",
-            "addressRegion": "Berlin",
-            "addressLocality": "Kreuzberg",
-            "postalCode": "10969"
-        },
-        "location": {
-            "type": "Point",
-            "coordinates": [13.3903, 52.5075]
-        },
-        "name": "Checkpoint Markt"
-    }
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        33.9921,
+        -6.8488
+      ]
+    },
+    "name": "Vente de matelats"
+  },
+  {
+    "id": "urn:ngsi-ld:Store:002",
+    "type": "Store",
+    "address": {
+      "streetAddress": "5 Rue Karia",
+      "addressRegion": "Sal_",
+      "addressLocality": "Medina",
+      "postalCode": "100012"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        34.0365,
+        -6.8268
+      ]
+    },
+    "name": "Mall M_dina Sal_"
+  }
 ]
 ```
 
