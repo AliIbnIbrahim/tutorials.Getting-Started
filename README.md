@@ -254,7 +254,7 @@ curl -iX POST \
         "value": {
             "streetAddress": "1 place Othmane Ibn Affane",
             "addressRegion": "Rabat",
-            "addressLocality": "L'Agdal",
+            "addressLocality": "Lagdal",
             "postalCode": "10030"
         },
         "metadata": {
