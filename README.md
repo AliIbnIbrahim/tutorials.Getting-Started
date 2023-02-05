@@ -710,8 +710,8 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 Want to learn how to add more complexity to your application by adding advanced features? You can find out by reading
 the other tutorials in this series:
 
-&nbsp; 101. [Getting Started](https://github.com/FIWARE/tutorials.Getting-Started)<br/> &nbsp; 102.
-[Entity Relationships](https://github.com/FIWARE/tutorials.Entity-Relationships)<br/> &nbsp; 103.
+&nbsp; 101. [Getting Started](https://github.com/AliIbnIbrahim/tutorials.Getting-Started)<br/> &nbsp; 102.
+[Entity Relationships](https://github.com/AliIbnIbrahim/tutorials.Entity-Relationships)<br/> &nbsp; 103.
 [CRUD Operations](https://github.com/FIWARE/tutorials.CRUD-Operations)<br/> &nbsp; 104.
 [Context Providers](https://github.com/FIWARE/tutorials.Context-Providers)<br/> &nbsp; 105.
 [Altering the Context Programmatically](https://github.com/FIWARE/tutorials.Accessing-Context)<br/> &nbsp; 106.
