@@ -72,32 +72,20 @@ run from exposed ports.
 
 # Prerequisites
 
-## Docker
+## Docker and Docker Compose
 
-To keep things simple both components will be run using [Docker](https://www.docker.com). **Docker** is a container
-technology which allows to different components isolated into their respective environments.
+see https://github.com/AliIbnIbrahim/tutorials.NGSI-v2 for installation of docker and docker compose 
 
--   To install Docker on Windows follow the instructions [here](https://docs.docker.com/docker-for-windows/)
--   To install Docker on Mac follow the instructions [here](https://docs.docker.com/docker-for-mac/)
--   To install Docker on Linux follow the instructions [here](https://docs.docker.com/install/)
+And ensure that you are using Docker version 20.10 or higher and Docker Compose 1.29 or higher and upgrade if
+necessary.
 
-## Docker Compose (Optional)
-
-**Docker Compose** is a tool for defining and running multi-container Docker applications. A
-[YAML file](https://raw.githubusercontent.com/Fiware/tutorials.Getting-Started/master/docker-compose.yml) is used
-configure the required services for the application. This means all container services can be brought up in a single
-command. Docker Compose is installed by default as part of Docker for Windows and Docker for Mac, however Linux users
-will need to follow the instructions found [here](https://docs.docker.com/compose/install/)
-
-You can check your current **Docker** and **Docker Compose** versions using the following commands:
+with
 
 ```console
 docker-compose -v
 docker version
 ```
 
-Please ensure that you are using Docker version 20.10 or higher and Docker Compose 1.29 or higher and upgrade if
-necessary.
 
 # Starting the containers
 
