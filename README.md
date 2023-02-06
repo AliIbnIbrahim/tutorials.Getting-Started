@@ -676,7 +676,7 @@ curl -G -X GET \
   -d 'type=Store' \
   -d 'georel=near;maxDistance:1500' \
   -d 'geometry=point' \
-  -d 'coords=52.5162,13.3777' \
+  -d 'coords=33.9921,-6.8488' \
   -d 'options=keyValues'
 ```
 
@@ -688,19 +688,20 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 ```json
 [
     {
-        "id": "urn:ngsi-ld:Store:002",
-        "type": "Store",
-        "address": {
-            "streetAddress": "Friedrichstraße 44",
-            "addressRegion": "Berlin",
-            "addressLocality": "Kreuzberg",
-            "postalCode": "10969"
-        },
-        "location": {
-            "type": "Point",
-            "coordinates": [13.3903, 52.5075]
-        },
-        "name": "Checkpoint Markt"
+     "id": "urn:ngsi-ld:Store:001",
+    "type": "Store",
+    "address": {
+      "streetAddress": "1 place Othmane Ibn Affane",
+      "addressRegion": "Rabat",
+      "addressLocality": "Lagdal",
+      "postalCode": "10030"
+    },
+    "location": {
+      "type": "Point",
+      "coordinates": [33.9921, -6.8488]
+    },
+            
+    "name": "Vente de matelats"
     }
 ]
 ```
