@@ -1,13 +1,7 @@
 [![NGSI v2](https://img.shields.io/badge/NGSI-v2-5dc0cf.svg)](https://fiware-ges.github.io/orion/api/v2/stable/)
 
-[![FIWARE Core Context Management](https://nexus.lab.fiware.org/repository/raw/public/badges/chapters/core.svg)](https://github.com/FIWARE/catalogue/blob/master/core/README.md)
-[![License: MIT](https://img.shields.io/github/license/fiware/tutorials.Getting-Started.svg)](https://opensource.org/licenses/MIT)
-[![Support badge](https://img.shields.io/badge/tag-fiware-orange.svg?logo=stackoverflow)](https://stackoverflow.com/questions/tagged/fiware)
-<br/> [![Documentation](https://img.shields.io/readthedocs/fiware-tutorials.svg)](https://fiware-tutorials.rtfd.io)
 
-This is an Introductory Tutorial to the FIWARE Platform. We will start with the data from a supermarket chain’s store
-finder and create a very simple _“Powered by FIWARE”_ application by passing in the address and location of each store
-as context data to the FIWARE context broker.
+This is an Introductory Tutorial to the FIWARE Platform. We will start with the data from a supermarket chain’s store finder and create a very simple _“Powered by FIWARE”_ application by passing in the address and location of each store as context data to the FIWARE context broker.
 
 The tutorial uses [cUrl](https://ec.haxx.se/) commands throughout, but is also available as
 [Postman documentation](https://fiware.github.io/tutorials.Getting-Started/)
@@ -15,10 +9,7 @@ The tutorial uses [cUrl](https://ec.haxx.se/) commands throughout, but is also a
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d6671a59a7e892629d2b)
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/FIWARE/tutorials.Getting-Started/tree/NGSI-v2)
 
-🇯🇵 このチュートリアルは[日本語](https://github.com/FIWARE/tutorials.Getting-Started/blob/master/README.ja.md)でもご覧い
-ただけます。<br/> 🇵🇹 Este tutorial também está disponível em
-[português](https://github.com/FIWARE/tutorials.Getting-Started/blob/master/README.pt.md) <br/> 🇪🇸 Este tutorial también
-está disponible en [español](https://github.com/FIWARE/tutorials.Getting-Started/blob/master/README.es.md)
+
 
 ## Contents
 
