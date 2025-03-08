@@ -65,7 +65,7 @@ And ensure that you are using Docker version 20.10 or higher and Docker Compose 
 with
 
 ```console
-docker-compose -v
+docker compose version
 docker version
 ```
 
