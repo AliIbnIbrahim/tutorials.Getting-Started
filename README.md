@@ -113,7 +113,7 @@ command (without the hyphen `-` )found in [Compose V2](https://docs.docker.com/c
 repository and create the necessary images by running the commands as shown:
 
 ```console
-git clone https://github.com/FIWARE/tutorials.Getting-Started.git
+git clone https://github.com/AliIbnIbrahim/tutorials.Getting-Started.git
 cd tutorials.Getting-Started
 git checkout NGSI-v2
 
