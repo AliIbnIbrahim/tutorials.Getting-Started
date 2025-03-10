@@ -533,7 +533,7 @@ curl -G -X GET \
     'http://localhost:1026/v2/entities' \
     -d 'type=Store' \
     -d 'q=address.addressLocality==Lagdal' \
-    -d 'options=keyValues'
+    -d 'options=keyValues'|jq
 ```
 
 #### Response:
@@ -635,8 +635,8 @@ curl -G -X GET \
   -d 'type=Store' \
   -d 'georel=near;maxDistance:1500' \
   -d 'geometry=point' \
-  -d 'coords=33.9921,-6.8488' \
-  -d 'options=keyValues'
+  -d 'coords=-6.8400,33.9900' \
+  -d 'options=keyValues'|jq
 ```
 
 #### Response:
@@ -646,8 +646,8 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
 
 ```json
 [
-    {
-     "id": "urn:ngsi-ld:Store:001",
+  {
+    "id": "urn:ngsi-ld:Store:001",
     "type": "Store",
     "address": {
       "streetAddress": "1 place Othmane Ibn Affane",
@@ -657,11 +657,13 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
     },
     "location": {
       "type": "Point",
-      "coordinates": [33.9921, -6.8488]
+      "coordinates": [
+        33.9921,
+        -6.8488
+      ]
     },
-            
     "name": "Vente de matelats"
-    }
+  }
 ]
 ```
 
