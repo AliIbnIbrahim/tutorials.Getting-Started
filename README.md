@@ -353,6 +353,17 @@ This example returns the data of `urn:ngsi-ld:Store:001`
 ```console
 curl -G -X GET \
    'http://localhost:1026/v2/entities/urn:ngsi-ld:Store:001' \
+   -d 'options=keyValues' 
+```
+messy ? right ?
+
+what if we install jq 
+https://www.baeldung.com/linux/jq-command-json
+and pipe it to the output ? 
+
+```console
+curl -G -X GET \
+   'http://localhost:1026/v2/entities/urn:ngsi-ld:Store:001' \
    -d 'options=keyValues' |jq
 ```
 
