@@ -344,54 +344,6 @@ At the moment, for the store finder demo all the context data is being added dir
 
 Here are a few examples, in each case the `options=keyValues` query parameter has been used shorten the responses by stripping out the type elements from each attribute
 
-### Obtain entity data by ID
-
-This example returns the data of `urn:ngsi-ld:Store:001`
-
-#### :four: Request:
-
-```console
-curl -G -X GET \
-   'http://localhost:1026/v2/entities/urn:ngsi-ld:Store:001' \
-   -d 'options=keyValues' 
-```
-messy ? right ?
-
-what if we install jq 
-https://www.baeldung.com/linux/jq-command-json
-and pipe it to the output ? 
-
-```console
-curl -G -X GET \
-   'http://localhost:1026/v2/entities/urn:ngsi-ld:Store:001' \
-   -d 'options=keyValues' |jq
-```
-
-#### Response:
-
-Because of the use of the `options=keyValues`, the response consists of JSON only without the attribute `type` and `metadata` elements.
-
-```json
-{
-  "id": "urn:ngsi-ld:Store:001",
-  "type": "Store",
-  "address": {
-    "streetAddress": "1 place Othmane Ibn Affane",
-    "addressRegion": "Rabat",
-    "addressLocality": "Lagdal",
-    "postalCode": "10030"
-  },
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      33.9921,
-      -6.8488
-    ]
-  },
-  "name": "Vente de matelats"
-}
-```
-
 ### Obtain entity data by type
 
 This example returns the data of all `Store` entities within the context data The `type` parameter limits the response
@@ -403,7 +355,7 @@ to store entities only.
 curl -G -X GET \
     'http://localhost:1026/v2/entities' \
     -d 'type=Store' \
-    -d 'options=keyValues'
+    -d 'options=keyValues' 
 ```
 
 #### raw rasponse:
@@ -470,6 +422,44 @@ Because of the use of the `options=keyValues`, the response consists of JSON onl
   }
 ]
 ```
+
+### Obtain entity data by ID
+
+This example returns the data of `urn:ngsi-ld:Store:001`
+
+#### :four: Request:
+
+```console
+curl -G -X GET \
+   'http://localhost:1026/v2/entities/urn:ngsi-ld:Store:001' \
+   -d 'options=keyValues' |jq
+```
+
+#### Response:
+
+Because of the use of the `options=keyValues`, the response consists of JSON only without the attribute `type` and `metadata` elements.
+
+```json
+{
+  "id": "urn:ngsi-ld:Store:001",
+  "type": "Store",
+  "address": {
+    "streetAddress": "1 place Othmane Ibn Affane",
+    "addressRegion": "Rabat",
+    "addressLocality": "Lagdal",
+    "postalCode": "10030"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      33.9921,
+      -6.8488
+    ]
+  },
+  "name": "Vente de matelats"
+}
+```
+
 
 ### Filter context data by comparing the values of an attribute
 
